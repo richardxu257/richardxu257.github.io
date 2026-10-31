@@ -4,8 +4,8 @@
   --text: #243247;
   --muted: #66758b;
   --line: #d9e1ed;
-  --accent: #3265a8;
-  --selected: #e2ebfa;
+  --accent: #24518f;
+  --selected: #d8e4f7;
   --button: #ebf0f7;
 }
 :root[data-theme="dark"] {
@@ -14,8 +14,8 @@
   --text: #e5edf8;
   --muted: #9fadc3;
   --line: #303e54;
-  --accent: #9dbfff;
-  --selected: #263b5d;
+  --accent: #82a8e8;
+  --selected: #223653;
   --button: #222f43;
 }
 * { box-sizing: border-box; }
