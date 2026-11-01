@@ -8,6 +8,7 @@
   try { explicitTheme = ['light', 'dark'].includes(localStorage.getItem('portfolio-theme')); } catch {}
 
   function activateSection() {
+    if (!tabs.length) return;
     const requested = location.hash.slice(1);
     const selected = tabs.find(tab => tab.getAttribute('aria-controls') === requested) || tabs[0];
     tabs.forEach(tab => {
@@ -19,7 +20,7 @@
     document.title = `${selected.textContent} — Personal website`;
   }
 
-  document.querySelector('[role="tablist"]').addEventListener('keydown', event => {
+  document.querySelector('[role="tablist"]')?.addEventListener('keydown', event => {
     const index = tabs.indexOf(document.activeElement);
     if (index < 0) return;
     let next;
