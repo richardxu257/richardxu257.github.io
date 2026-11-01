@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Modeling The Future Challenge; Developed mathematical models for child asthma in California and created mitigation strategies (e.g. air filters) informed by model outputs">
+  <title>Lung and Winding Road: Modeling Health in a Polluted World — Richard</title>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('portfolio-theme'); } catch {}
+      document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+        ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    })();
+  </script>
+  <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=3" defer></script>
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="home-button" href="index.html#about" aria-label="Home" title="Home"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9M9 21v-8h6v8"/></svg></a>
+      <nav aria-label="Portfolio sections">
+        <div class="tabs" aria-label="Portfolio sections">
+          <a class="tab" href="index.html#about">About</a>
+          <a class="tab" href="index.html#research">Research</a>
+          <a class="tab" href="index.html#projects" aria-current="page">Projects</a>
+          <a class="tab" href="index.html#writings">Writings</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+        <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 14A9 9 0 0 1 10 3.2 9 9 0 1 0 20.8 14Z"/></svg>
+        <span class="theme-label">Light</span>
+      </button>
+    </header>
+    <main id="main" tabindex="-1">
+      <article class="detail-article">
+        <a class="back-link" href="index.html#projects"><span aria-hidden="true">← </span>Back to Projects</a>
+        <div class="detail-meta">Projects<span aria-hidden="true"> · </span>Aug. 2025 – Apr. 2026</div>
+        <h1 class="detail-title">Lung and Winding Road: Modeling Health in a Polluted World</h1>
+        <a class="source-button" href="https://drive.google.com/file/d/1Myb4h3mzh3eiQmz-g99VeR7lVF2xMQOb/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Read paper<span aria-hidden="true"> ↗</span></a>
+        <section class="detail-body" aria-labelledby="detail-label">
+          <h2 id="detail-label">Executive summary</h2>
+          <p>Asthma remains a persistent public health and economic challenge in the United States, contributing to substantial emergency department (ED) utilization and high costs related to healthcare and lost productivity. Although asthma prevalence has shown improvement over the past decade, the disease remains a significant threat to the health and wellbeing of citizens, particularly in areas with high levels of environmental pollutants due to wildfires, dense traffic, and other causes, such as the state of California. This paper quantifies demographic and environmental determinants of asthma prevalence for children in California and develops mathematical models to guide targeted intervention.</p>
+<p>To characterize asthma risk, we leverage credible data sources on asthma prevalence in California. Key data includes the Air Quality Index (AQI) metric developed by the Environmental Protection Agency, demographic and socioeconomic data from the U.S. Census Bureau, and asthma ED visit data for children from the California Health and Human Services Agency.</p>
+<p>Our modeling framework incorporates:</p>
+<p class="summary-point">• ARIMA time-series forecasting models to predict asthma ED visit ratios, county population, and costs of asthma-related hospitalizations through 2033, along with sensitivity analysis to evaluate model robustness.</p>
+<p class="summary-point">• Random forest models to assess feature importance of asthma determinants, along with SHapley Additive exPlanations (SHAP) analysis to enhance model interpretability.</p>
+<p class="summary-point">• Multivariate regression models to quantify a specific relationship between identified factors and asthma ED visit ratios, along with t-test analysis to measure statistical significance of results.</p>
+<p>Across modeling approaches, median household income and population density consistently emerge as the strongest predictors of asthma ED visit ratios. AQI metrics contribute a secondary but meaningful effect that can be mitigated through policy and behavior recommendations. Time-series projections indicate that ED visit ratios are expected to trend toward levels prior to the COVID-19 pandemic rather than continue declining.</p>
+<p>Based on our model results, we recommend three targeted intervention strategies:</p>
+<p>1. Emission and exposure reduction in high-density, low-income counties through electrification incentives and localized low-emission policies.</p>
+<p>2. Indoor air quality improvements for vulnerable households, including subsidized High-Efficiency Particulate Air (HEPA) filtration and ventilation remediation programs.</p>
+<p>3. Preventive healthcare incentives and financial protections designed to reduce emergency department utilization and long-term healthcare cost volatility.</p>
+<p>In contrast to uniform statewide implementation, our analysis supports allocating resources toward geographically targeted interventions to maximize reductions in asthma-related costs. Overall, asthma burden in California is structurally linked to economic disadvantage and population concentration; our data-driven approach provides an efficient pathway to reducing incidence and financial variability associated with asthma-related emergency care.</p>
+        </section>
+        <p class="source-note">Executive summary reproduced from the linked report. PDF line wrapping and hyphenation normalized.</p>
+      </article>
+    </main>
+    <footer class="site-footer"><span>Personal website</span><svg class="footer-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="12" width="16" height="16" rx="6"/><rect x="12" y="4" width="16" height="16" rx="6"/></svg><span>Research · Projects · Writings</span></footer>
+  </div>
+</body>
+</html>
