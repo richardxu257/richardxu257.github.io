@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Researching control methods for multi-agent AI systems through SPAR">
+  <title>AI control for multi-agent systems — Richard</title>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('portfolio-theme'); } catch {}
+      document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+        ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    })();
+  </script>
+  <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=3" defer></script>
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="home-button" href="index.html#about" aria-label="Home" title="Home"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9M9 21v-8h6v8"/></svg></a>
+      <nav aria-label="Portfolio sections">
+        <div class="tabs" aria-label="Portfolio sections">
+          <a class="tab" href="index.html#about">About</a>
+          <a class="tab" href="index.html#research" aria-current="page">Research</a>
+          <a class="tab" href="index.html#projects">Projects</a>
+          <a class="tab" href="index.html#writings">Writings</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+        <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 14A9 9 0 0 1 10 3.2 9 9 0 1 0 20.8 14Z"/></svg>
+        <span class="theme-label">Light</span>
+      </button>
+    </header>
+    <main id="main" tabindex="-1">
+      <article class="detail-article">
+        <a class="back-link" href="index.html#research"><span aria-hidden="true">← </span>Back to Research</a>
+        <div class="detail-meta">Research<span aria-hidden="true"> · </span>Sep. 2026 – Present</div>
+        <h1 class="detail-title">AI control for multi-agent systems</h1>
+        
+        <section class="detail-body" aria-labelledby="detail-label">
+          <h2 id="detail-label">Overview</h2>
+          <p>Researching control methods for multi-agent AI systems through SPAR</p>
+        </section>
+        
+      </article>
+    </main>
+    <footer class="site-footer"><span>Personal website</span><svg class="footer-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="12" width="16" height="16" rx="6"/><rect x="12" y="4" width="16" height="16" rx="6"/></svg><span>Research · Projects · Writings</span></footer>
+  </div>
+</body>
+</html>
