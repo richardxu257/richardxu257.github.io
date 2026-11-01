@@ -66,3 +66,33 @@ main:focus { outline: none; }
   .footer-mark { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* Dates stay in a left-hand column beside each timeline description. */
+.about-copy { max-width: 740px; font-size: 18px; }
+.about-copy p { margin: 0 0 24px; }
+.contact-line { color: var(--muted); font-size: 14px; }
+.email-address { color: var(--text); white-space: nowrap; }
+.timeline-content { max-width: 100%; padding-top: 44px; }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline-entry { position: relative; display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 40px; padding: 0 0 38px; }
+.timeline-entry::before { content: ""; position: absolute; left: 190px; top: 11px; bottom: -11px; width: 1px; background: var(--line); }
+.timeline-entry:last-child { padding-bottom: 0; }
+.timeline-entry:last-child::before { display: none; }
+.timeline-entry::after { content: ""; position: absolute; top: 9px; left: 186px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px var(--background); }
+.timeline-date { color: var(--muted); font-size: 12px; line-height: 1.8; letter-spacing: .2px; padding-top: 2px; font-variant-numeric: tabular-nums; }
+.timeline-end { display: block; }
+.timeline-description { max-width: 740px; }
+.timeline-description p { margin: 0; font-size: 15px; line-height: 1.8; }
+.entry-link { display: inline-flex; align-items: center; gap: 5px; color: var(--accent); margin-top: 12px; font-size: 12px; font-weight: 500; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.entry-link:hover { text-decoration-thickness: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 740px) {
+  .about-copy { font-size: 17px; }
+  .contact-line { font-size: 13px; }
+  .timeline-content { padding-top: 32px; }
+  .timeline-entry { grid-template-columns: 100px minmax(0, 1fr); gap: 28px; padding-bottom: 32px; }
+  .timeline-entry::before { left: 114px; }
+  .timeline-entry::after { left: 110px; }
+  .timeline-date { font-size: 11px; }
+  .timeline-description p { font-size: 14px; }
+}
