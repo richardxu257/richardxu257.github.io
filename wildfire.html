@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Modeling The Future Challenge; Developed mathematical models for wildfire effects in California and created mitigation strategies (e.g. prescribed burns) informed by model outputs">
+  <title>We Didn’t Start the Fire!!! — Richard</title>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('portfolio-theme'); } catch {}
+      document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+        ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    })();
+  </script>
+  <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=6">
+  <script src="script.js?v=3" defer></script>
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="home-button" href="index.html#about" aria-label="Home" title="Home"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9M9 21v-8h6v8"/></svg></a>
+      <nav aria-label="Portfolio sections">
+        <div class="tabs" aria-label="Portfolio sections">
+          <a class="tab" href="index.html#about">About</a>
+          <a class="tab" href="index.html#research">Research</a>
+          <a class="tab" href="index.html#projects" aria-current="page">Projects</a>
+          <a class="tab" href="index.html#writings">Writings</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+        <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 14A9 9 0 0 1 10 3.2 9 9 0 1 0 20.8 14Z"/></svg>
+        <span class="theme-label">Light</span>
+      </button>
+    </header>
+    <main id="main" tabindex="-1">
+      <article class="detail-article">
+        <a class="back-link" href="index.html#projects"><span aria-hidden="true">← </span>Back to Projects</a>
+        <div class="detail-meta">Projects<span aria-hidden="true"> · </span>Aug. 2024 – Apr. 2025</div>
+        <h1 class="detail-title">We Didn’t Start the Fire!!!</h1>
+        <a class="source-button" href="https://drive.google.com/file/d/1rIWxt44AqWTfbbgwSWkomcDn6R0qfO4R/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read paper<span aria-hidden="true"> ↗</span></a>
+        <section class="detail-body" aria-labelledby="detail-label">
+          <h2 id="detail-label">Executive summary</h2>
+          <p>Wildfires, often ignited by natural causes like lightning or human activities such as unattended campfires and arson, pose a severe threat to both rural and urban communities. Due to prolonged drought conditions, California faces the highest wildfire risk in the U.S., with over 8,000 wildfires burning more than 1 million acres in 2024 alone [7]. The Eaton and Palisades fires in early 2025 caused at least 29 deaths and burned nearly 38,000 acres [9]. Beyond personal and property losses, wildfires strain first responders, increase health risks, and burden insurance companies, leading some major insurers to stop issuing policies in high-risk areas [12]. This paper seeks to examine the correlations between natural and human factors affecting wildfire severity and frequency.</p>
+<p>In order to characterize wildfire risk, we leveraged a variety of credible sources to find data on wildfires in California, population and census data in California, weather data, and fire station locations. Utilizing a variety of graphing methods in addition to geospatial visualization, we observed and determined important features and metrics to inform our subsequent risk analysis. By conducting several time series forecasting and multivariable regression techniques and selecting the optimal model, we determined significant factors towards wildfire severity to include population density, human activity that caused fires, and fire station distance.</p>
+<p>Our analysis has concluded four key recommendations aimed at reducing the severity and prevalence of major wildfire events. The first was to increase usage of prescribed burning, defensible spaces, and fuel reduction, which mitigate wildfire spread and damage by removing burnable material and preventing wildfires from reaching infrastructure. We also recommended a stronger enforcement of hunting and campfire laws to prevent civilians from endangering fire spread near dense vegetation and infrastructure. Furthermore, we suggested that California expand the range of fire stations to more effectively respond to and suppress wildfire spread. Lastly, we advocated for investment in wildfire education programs, as well as wildfire education in schools, especially in areas that are more susceptible to wildfires.</p>
+        </section>
+        <p class="source-note">Executive summary reproduced from the linked report. PDF line wrapping and hyphenation normalized.</p>
+      </article>
+    </main>
+    <footer class="site-footer"><span>Personal website</span><svg class="footer-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="12" width="16" height="16" rx="6"/><rect x="12" y="4" width="16" height="16" rx="6"/></svg><span>Research · Projects · Writings</span></footer>
+  </div>
+</body>
+</html>
