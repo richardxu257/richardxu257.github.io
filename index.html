@@ -15,7 +15,7 @@
     })();
   </script>
   <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script src="script.js?v=2" defer></script>
   <noscript><style>.panel[hidden]{display:block!important}.theme-toggle{display:none}.panel{margin-bottom:5rem}</style></noscript>
 </head>
@@ -41,15 +41,60 @@
     <main id="main" tabindex="-1">
       <section class="panel" id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
         <div class="section-heading"><span class="section-number" aria-hidden="true">01 /</span><h1>About<span class="heading-period">.</span></h1></div>
-        <div class="section-content"><!-- Add your About content here. --></div>
+        <div class="section-content about-copy">
+          <p>Hi! I'm Richard Xu, a CS and math student at Yale. I'm interested in AI and thinking about how it will change the world.</p>
+          <p class="contact-line">I can be reached at <span class="email-address">r [dot] xu [at] yale [dot] edu</span></p>
+        </div>
       </section>
       <section class="panel" id="research" role="tabpanel" aria-labelledby="tab-research" tabindex="0" hidden>
         <div class="section-heading"><span class="section-number" aria-hidden="true">02 /</span><h1>Research<span class="heading-period">.</span></h1></div>
-        <div class="section-content"><!-- Add your Research content here. --></div>
+        <div class="section-content timeline-content">
+        <ol class="timeline" aria-label="Research timeline">
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2026-09">Sep. 2026</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><span>Present</span></span></div>
+            <div class="timeline-description"><p>Researching control methods for multi-agent AI systems through SPAR</p></div>
+          </li>
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2025-07">Jul. 2025</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><span>Present</span></span></div>
+            <div class="timeline-description"><p>Researched and modeled the construction of a new particle beamline for Rutherford scattering experiments, to be built at a university</p></div>
+          </li>
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2025-07">Jul. 2025</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><time datetime="2026-03">Mar. 2026</time></span></div>
+            <div class="timeline-description"><p>Researched the real-time application and benchmarking of YOLO computer vision models to edge devices on the NVIDIA Jetson Nano</p></div>
+          </li>
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2025-06">Jun. 2025</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><time datetime="2025-10">Oct. 2025</time></span></div>
+            <div class="timeline-description"><p>Researched radiation shielding properties of nanomaterials by measuring radiation leakage in a simulated linear accelerator vault environment, using TOPAS Geant4</p><a class="entry-link" href="https://pubmed.ncbi.nlm.nih.gov/42533604/" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a></div>
+          </li>
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2025-03">Mar. 2025</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><time datetime="2025-09">Sep. 2025</time></span></div>
+            <div class="timeline-description"><p>Researched prompt compression improvements in large language models by dynamically allocating the tokens in a soft prompt based on the information distribution across the input prompt</p><a class="entry-link" href="https://openreview.net/pdf?id=WD3NyoCnoK" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a></div>
+          </li>
+        </ol>
+        </div>
       </section>
       <section class="panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0" hidden>
         <div class="section-heading"><span class="section-number" aria-hidden="true">03 /</span><h1>Projects<span class="heading-period">.</span></h1></div>
-        <div class="section-content"><!-- Add your Projects content here. --></div>
+        <div class="section-content timeline-content">
+        <ol class="timeline" aria-label="Projects timeline">
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2026-10">Oct. 2026</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><span>Present</span></span></div>
+            <div class="timeline-description"><p>Developed a machine learning model for predicting the winner of NBA games based on historical matchups and present data of player lineups</p></div>
+          </li>
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2026-03">Mar. 2026</time></div>
+            <div class="timeline-description"><p>MathWorks Math Modeling Challenge; Developed mathematical models to simulate sports gambling across the United States</p><a class="entry-link" href="https://drive.google.com/file/d/1uQ4cprEqgBDHy7lutywysTjgt7WCixGD/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Report<span aria-hidden="true"> ↗</span></a></div>
+          </li>
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2025-08">Aug. 2025</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><time datetime="2026-04">Apr. 2026</time></span></div>
+            <div class="timeline-description"><p>Modeling The Future Challenge; Developed mathematical models for child asthma in California and created mitigation strategies (e.g. air filters) informed by model outputs</p><a class="entry-link" href="https://drive.google.com/file/d/1Myb4h3mzh3eiQmz-g99VeR7lVF2xMQOb/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a></div>
+          </li>
+          <li class="timeline-entry">
+            <div class="timeline-date"><time datetime="2024-08">Aug. 2024</time><span class="timeline-end"><span aria-hidden="true">— </span><span class="sr-only"> to </span><time datetime="2025-04">Apr. 2025</time></span></div>
+            <div class="timeline-description"><p>Modeling The Future Challenge; Developed mathematical models for wildfire effects in California and created mitigation strategies (e.g. prescribed burns) informed by model outputs</p><a class="entry-link" href="https://drive.google.com/file/d/1rIWxt44AqWTfbbgwSWkomcDn6R0qfO4R/view?usp=sharing" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a></div>
+          </li>
+        </ol>
+        </div>
       </section>
       <section class="panel" id="writings" role="tabpanel" aria-labelledby="tab-writings" tabindex="0" hidden>
         <div class="section-heading"><span class="section-number" aria-hidden="true">04 /</span><h1>Writings<span class="heading-period">.</span></h1></div>
