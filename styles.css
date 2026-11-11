@@ -134,3 +134,20 @@ main:focus { outline: none; }
   .back-link { margin-bottom: 30px; }
   .detail-body { font-size: 15px; }
 }
+
+/* Profile controls share the top-right corner with the theme switch. */
+.header-actions { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
+.profile-links { display: flex; align-items: center; gap: 4px; }
+.profile-link { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 36px; border-radius: 7px; color: var(--accent); text-decoration: none; transition: background .18s; }
+a.profile-link:hover { background: var(--selected); }
+.profile-placeholder { color: var(--muted); opacity: .65; cursor: default; }
+.cv-placeholder { font-size: 12px; font-weight: 600; letter-spacing: .2px; }
+@media (min-width: 741px) and (max-width: 1000px) {
+  .site-header { gap: 14px; }
+  .tab { padding-inline: 11px; }
+  .header-actions { gap: 10px; }
+}
+@media (max-width: 740px) {
+  .header-actions { gap: 12px; margin-left: auto; }
+  .header-actions .theme-toggle { margin-left: 0; }
+}
