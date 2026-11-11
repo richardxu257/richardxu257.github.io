@@ -2,6 +2,10 @@
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const panels = [...document.querySelectorAll('[role="tabpanel"]')];
   const themeButton = document.querySelector('.theme-toggle');
+  // Refresh the shared stylesheet on pages that still reference its previous version.
+  const stylesheet = document.querySelector('link[rel="stylesheet"]');
+  if (stylesheet?.getAttribute('href') === 'styles.css?v=6') stylesheet.href = 'styles.css?v=7';
+
   // Keep the same profile controls on the home and detail pages.
   const headerActions = document.createElement('div');
   headerActions.className = 'header-actions';
