@@ -17,8 +17,9 @@
   <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=7">
   <script src="script.js?v=4" defer></script>
-  <link rel="stylesheet" href="writing.css?v=1">
+  <link rel="stylesheet" href="writing.css?v=2">
   <script src="writings.js?v=1" defer></script>
+  <script src="writing-integrated.js?v=1" defer></script>
   <noscript><style>.panel[hidden]{display:block!important}.theme-toggle{display:none}.panel{margin-bottom:5rem}</style></noscript>
 </head>
 <body>
@@ -100,7 +101,11 @@
       </section>
       <section class="panel" id="writings" role="tabpanel" aria-labelledby="tab-writings" tabindex="0" hidden>
         <div class="section-heading"><span class="section-number" aria-hidden="true">04 /</span><h1>Writings<span class="heading-period">.</span></h1></div>
-        <div class="section-content"><div id="writing-list" class="writing-list" aria-live="polite">Loading writings…</div><noscript>Enable JavaScript to read published writings.</noscript></div>
+        <div class="section-content writings-content">
+          <div class="owner-access"><button id="owner-sign-in" type="button" title="Owner access only">Sign in with GitHub</button><button id="owner-cancel" type="button" hidden>Cancel sign-in</button><span id="owner-status" role="status" aria-live="polite"></span><a id="owner-popup-link" target="_blank" rel="noopener noreferrer" hidden>Continue GitHub sign-in ↗</a></div>
+          <iframe id="writing-editor" title="Private writing editor" referrerpolicy="no-referrer" hidden></iframe>
+          <h2 id="published-label" hidden>Published writings</h2><div id="writing-list" class="writing-list" aria-live="polite">Loading writings…</div><noscript>Enable JavaScript to read published writings.</noscript>
+        </div>
       </section>
     </main>
     <footer class="site-footer"><span>Personal website</span><svg class="footer-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="12" width="16" height="16" rx="6"/><rect x="12" y="4" width="16" height="16" rx="6"/></svg><span>Research · Projects · Writings</span></footer>
