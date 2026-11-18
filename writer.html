@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-3YzANRZImRcP4AHWdwUV8bKPS44S5CBWKleN9xj+dRo='; style-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Richard’s private writing desk.">
+  <title>Writing desk — Richard</title>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('portfolio-theme'); } catch {}
+      document.documentElement.dataset.theme = theme === 'light' || theme === 'dark'
+        ? theme : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    })();
+  </script>
+  <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=7">
+  <script src="script.js?v=4" defer></script>
+  <link rel="stylesheet" href="writing.css?v=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <script src="writing-store.js?v=1" defer></script>
+  <script src="writings.js?v=1" defer></script>
+  <script src="writer.js?v=1" defer></script>
+</head>
+<body class="writer-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="home-button" href="index.html#about" aria-label="Home" title="Home"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9M9 21v-8h6v8"/></svg></a>
+      <nav aria-label="Portfolio sections">
+        <div class="tabs" aria-label="Portfolio sections">
+          <a class="tab" href="index.html#about">About</a>
+          <a class="tab" href="index.html#research">Research</a>
+          <a class="tab" href="index.html#projects">Projects</a>
+          <a class="tab" href="index.html#writings" aria-current="page">Writings</a>
+        </div>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+        <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.8 14A9 9 0 0 1 10 3.2 9 9 0 1 0 20.8 14Z"/></svg>
+        <span class="theme-label">Light</span>
+      </button>
+    </header>
+    <main id="main" tabindex="-1">
+      <p class="writer-eyebrow">Richard’s writing desk · Owner access</p>
+      <div class="writer-heading"><h1>Room to think<span class="heading-period">.</span></h1><button id="disconnect" class="writer-button" hidden>Disconnect</button></div>
+      <p id="writer-status" class="writer-status" role="status" aria-live="polite">Connect to open your private drafts.</p>
+      <section id="sign-in" class="writer-card" aria-labelledby="connect-heading">
+        <h2 id="connect-heading">Your private writing space</h2>
+        <p>Save separate drafts, return to them later, and publish when you’re ready. Only Richard’s GitHub account can open the editor. Drafts are stored in a separate private repository.</p>
+        <form id="connect-form" autocomplete="off">
+          <label for="github-token">GitHub access token</label>
+          <input id="github-token" type="password" autocomplete="off" spellcheck="false" autocapitalize="off" required aria-describedby="token-help">
+          <p id="token-help" class="writer-help">Sent only to GitHub. Kept in this tab’s memory until you disconnect or close it; never saved in the website or browser storage.</p>
+          <button id="connect" class="writer-button primary" type="submit">Connect GitHub</button>
+        </form>
+        <details><summary>First-time setup</summary>
+          <ol>
+            <li>Sign in to GitHub as <strong>richardxu257</strong>.</li>
+            <li>Create a <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">fine-grained personal access token</a> with an expiration date you’re comfortable with.</li>
+            <li>Choose <strong>Only select repositories</strong>: <code>website-writing-drafts</code> and <code>richardxu257.github.io</code>.</li>
+            <li>Under Repository permissions, set <strong>Contents</strong> to <strong>Read and write</strong>. No other additional permissions are needed.</li>
+            <li>Generate the token yourself and enter it above. Keep it in your password manager if you want to reuse it; don’t paste it into chat.</li>
+          </ol>
+          <p>Never make the draft repository public or enable Pages for it. Publishing copies the selected saved entry into your public website repository.</p>
+        </details>
+      </section>
+      <section id="workspace" hidden aria-label="Private draft workspace">
+        <div class="writer-layout">
+          <aside class="draft-sidebar" aria-label="Saved drafts"><h2>Your entries</h2><p id="draft-count"></p><button id="new-draft" class="writer-button primary">New draft</button><div id="draft-list"></div></aside>
+          <div>
+            <p id="draft-empty">Choose an entry to continue writing, or start a new draft.</p>
+            <form id="draft-form" hidden>
+              <label for="draft-title">Title</label><input id="draft-title" maxlength="200" autocomplete="off">
+              <label for="draft-summary">Short description (optional)</label><textarea id="draft-summary" rows="2" maxlength="500"></textarea>
+              <label for="draft-body">Writing</label><textarea id="draft-body" rows="18" maxlength="150000" aria-describedby="format-help"></textarea>
+              <p id="format-help" class="writer-help">Separate paragraphs with a blank line. Use #, ##, or ### for headings. HTML is displayed as text.</p>
+              <div class="writer-toolbar"><button id="save-draft" class="writer-button primary" type="submit">Save draft</button><button id="preview-draft" class="writer-button" type="button" aria-expanded="false" aria-controls="draft-preview">Preview</button><button id="publish-draft" class="writer-button" type="button" disabled>Publish…</button><button id="download-draft" class="writer-button" type="button">Download backup</button></div>
+              <p class="writer-help">Save before switching entries or publishing. Edits to a published entry remain private until you publish again.</p>
+              <a id="published-link" hidden target="_blank" rel="noopener noreferrer">View published writing ↗</a>
+            </form>
+            <div id="draft-preview" class="writing-body" aria-label="Writing preview" hidden></div>
+          </div>
+        </div>
+      </section>
+      <dialog id="publish-confirmation" aria-labelledby="publish-heading"><h2 id="publish-heading">Publish this writing?</h2><p><strong id="publish-title"></strong></p><p>This saved entry’s title, description, and text will become public in Writings and in the website’s GitHub history. Your other drafts stay private.</p><div class="writer-toolbar"><button id="cancel-publish" class="writer-button">Keep private</button><button id="confirm-publish" class="writer-button primary">Publish writing</button></div></dialog>
+    </main>
+    <footer class="site-footer"><span>Personal website</span><svg class="footer-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="12" width="16" height="16" rx="6"/><rect x="12" y="4" width="16" height="16" rx="6"/></svg><span>Research · Projects · Writings</span></footer>
+  </div>
+</body>
+</html>

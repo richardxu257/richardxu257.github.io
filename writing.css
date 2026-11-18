@@ -1,0 +1,58 @@
+[hidden] { display: none !important; }
+.writing-list { display: grid; gap: 20px; max-width: 850px; color: var(--muted); }
+.writing-card { padding: 26px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; }
+.writing-card:hover { background: var(--button); border-color: var(--accent); }
+.writing-card time, .writing-date { font-size: 12px; color: var(--muted); }
+.writing-card h2 { margin: 14px 0 10px; font-size: 22px; color: var(--text); }
+.writing-card p { margin: 0; }
+.writing-body { max-width: 760px; margin-top: 36px; font-size: 17px; line-height: 1.85; overflow-wrap: anywhere; }
+.writing-body p { white-space: pre-wrap; }
+.writing-body h2, .writing-body h3, .writing-body h4 { font-family: inherit; letter-spacing: normal; line-height: 1.4; margin-top: 36px; }
+.writer-page main { padding-top: 54px; }
+.writer-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+.writer-heading h1 { font-size: clamp(40px, 5vw, 66px); }
+.writer-eyebrow { color: var(--accent); text-transform: uppercase; font-size: 11px; letter-spacing: 1.8px; margin: 0 0 12px; }
+.writer-card { max-width: 650px; border: 1px solid var(--line); padding: 28px; border-radius: 14px; }
+.writer-card h2 { font-size: 20px; margin-top: 0; }
+.writer-card p, .writer-card li { font-size: 14px; line-height: 1.8; color: var(--muted); }
+.writer-card code { color: var(--text); overflow-wrap: anywhere; }
+.writer-card details { margin-top: 26px; }
+.writer-card summary { cursor: pointer; font-size: 13px; color: var(--accent); }
+.writer-page label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 500; }
+.writer-page input, .writer-page textarea { display: block; width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--background); color: var(--text); font: inherit; font-size: 15px; padding: 12px; margin-bottom: 24px; }
+.writer-page textarea { resize: vertical; line-height: 1.8; }
+.writer-page input:focus, .writer-page textarea:focus { border-color: var(--accent); }
+.writer-page button:not(.theme-toggle) { cursor: pointer; }
+.writer-page .writer-button { padding: 11px 16px; border: 1px solid var(--line); border-radius: 8px; background: var(--button); color: var(--text); font-size: 13px; }
+.writer-page .writer-button.primary { background: var(--accent); border-color: var(--accent); color: var(--background); }
+.writer-page .writer-button:hover { border-color: var(--accent); }
+.writer-page button:disabled { cursor: default; opacity: .45; }
+.writer-status { min-height: 24px; font-size: 13px; color: var(--muted); line-height: 1.7; max-width: 850px; }
+.error-message { color: #b02a38; }
+[data-theme="dark"] .error-message { color: #ffacb4; }
+.writer-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 34px; margin-top: 30px; }
+.draft-sidebar { border-right: 1px solid var(--line); padding-right: 22px; }
+.draft-sidebar h2 { margin: 0 0 6px; font-size: 17px; }
+#draft-count { color: var(--muted); font-size: 12px; margin: 0 0 18px; }
+#draft-list { display: grid; gap: 10px; margin-top: 20px; }
+.draft-list-item { display: grid; gap: 7px; padding: 15px; text-align: left; background: transparent; color: var(--text); border: 1px solid var(--line); border-radius: 9px; width: 100%; overflow-wrap: anywhere; }
+.draft-list-item strong { font-size: 14px; }
+.draft-list-item span, .draft-list-item small { font-size: 11px; color: var(--muted); line-height: 1.6; }
+.draft-list-item[aria-current="true"] { border-color: var(--accent); background: var(--selected); }
+.writer-toolbar { display: flex; flex-wrap: wrap; gap: 10px; }
+.writer-help { font-size: 12px; color: var(--muted); line-height: 1.8; }
+#draft-empty { color: var(--muted); padding: 40px 0; line-height: 1.8; }
+#draft-preview { padding-top: 24px; border-top: 1px solid var(--line); }
+#published-link { display: inline-block; margin-top: 15px; color: var(--accent); font-size: 13px; }
+.writer-page dialog { max-width: 500px; width: calc(100% - 40px); padding: 30px; border: 1px solid var(--line); border-radius: 14px; background: var(--background); color: var(--text); }
+.writer-page dialog::backdrop { background: rgb(0 0 0 / .55); }
+.writer-page dialog p { font-size: 14px; line-height: 1.8; }
+@media (max-width: 740px) {
+ .writer-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+ .draft-sidebar { border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 24px; }
+ #draft-list { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+ .writer-card { padding: 22px; }
+ .writer-heading { align-items: start; }
+ .writer-heading .writer-button { padding: 9px 12px; }
+ .writer-page main { padding-top: 36px; }
+}
